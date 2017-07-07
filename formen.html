@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kara's Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101471998-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body id="myPage">
+
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme-d3 w3-left-align">
+    <a class="w3-bar-item w3-button w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-black w3-hover-white"><i class="fa fa-home w3-margin-right"></i>Kara's Shop</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white">Mỹ phẩm Hàn</a>
+    <a href="index.html#sale" class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white">SALE !!!</a>
+    <div class="w3-dropdown-hover w3-hide-medium w3-hide-small">
+      <button href="index.html#others" class="w3-button w3-hover-white">Sản phẩm khác <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a href="index.html#others" class="w3-bar-item w3-button w3-theme-d3 w3-hover-white">Sâm Nonghyup</a>
+        <a href="index.html#others" class="w3-bar-item w3-button w3-theme-d3 w3-hover-white">Dầu nóng Hàn Quốc</a>
+        <a href="index.html#others" class="w3-bar-item w3-button w3-theme-d3 w3-hover-white">Thời trang</a>
+      </div>
+    </div>
+    <a href="index.html#contact" class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white">Thông tin thanh toán</a>
+    <a href="index.html#address" class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white">Liên hệ</a>
+    <a href="#" class="w3-bar-item w3-button w3-right w3-hover-teal" onclick="update()" title="Cart"><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-right w3-hover-teal" onclick="update()" title="Search"><i class="fa fa-search"></i></a>
+	<div class="w3-dropdown-hover w3-hide-medium w3-hide-small w3-right" title="Google Translate" id="translate"></div>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large">
+    <a href="#" class="w3-bar-item w3-button">Mỹ phẩm Hàn</a>
+	<a href="index.html#sale" class="w3-bar-item w3-button">SALE !!!</a>
+    <a href="index.html#others" class="w3-bar-item w3-button">Sản phẩm khác</a>
+    <a href="index.html#contact" class="w3-bar-item w3-button">Thông tin thanh toán</a>
+    <a href="index.html#address" class="w3-bar-item w3-button">Liên hệ</a>
+  </div>
+  
+</div>
+
+
+<!-- Tabs -->
+
+<!-- Mỹ phẩm Hàn (#cosmetic) Container -->
+<div class="w3-container w3-padding-64 w3-center w3-border w3-theme-l5" id="cosmetic">
+  <h2>Mỹ phẩm Hàn</h2>
+	<p class="w3-hide-small">Amore Pacific, Sulwhasoo, Hera, Hanyul, 
+	  Whoo, Ohui, Su:m37, Laneige, 
+	  Innisfree, Etude House, Mamonde, 
+	  Iope, 3CE, Missha, April Skin, Thefaceshop, 
+	  Skinfood, Narute Republic, Klairs, Tony Moly,
+	  Mise En Scene, Espoir, Ecole, Holika Holika, 
+	  Secret Key, Peripera, G9Skin, Touch in Sol, 
+	  Mizon, SeaNtree, The Yeon, Banila Co, Clio, Eglips, Jsoop, vv.</p>
+
+  <!-- Select category bar. Change here -->
+  <div class="w3-row w3-theme w3-border w3-margin-bottom">
+    <a href="skincare.html" class="w3-bar-item w3-button tablink w3-quarter w3-border-right w3-hide-small">Chăm sóc da</a>
+    <a href="makeup.html" class="w3-bar-item w3-button tablink w3-quarter w3-border-right w3-hide-small">Trang điểm</a>
+    <a href="tool.html" class="w3-bar-item w3-button tablink w3-quarter w3-border-right w3-hide-small">Dụng cụ</a>
+    <a href="#" class="w3-bar-item w3-button tablink w3-quarter w3-margin-bottom w3-white">Dành cho nam</a>
+
+
+ 
+    <!-- Filter and Sort bar for all screens. Change here-->
+    <div class="w3-row w3-white">
+	  <div class="w3-col w3-container s4 m4 l4 w3-left"> 	
+        <select class="w3-select" name="type" id="typeSelect" onchange="loadProduct()">
+	      <option value="" disabled selected>Chọn loại sản phẩm</option>		
+		  <option value="cleansing">Sữa rửa mặt</option>
+        </select>
+	  </div>
+	  <div class="w3-col w3-container s4 m4 l4 w3-center"> 	
+        <select class="w3-select" name="brand" id="brandSelect"  onchange="loadProduct()">
+	      <option value="" disabled selected>Chọn nhãn hiệu</option>
+		  <option value="ALL">Tất cả</option>
+		  <option value="CE">3CE</option>
+		  <option value="AMOREPACIFIC">Amore Pacific</option>
+		  <option value="APRILSKIN">April Skin</option>
+		  <option value="BANILA CO">Banila Co</option>
+          <option value="CLIO">Clio</option>
+          <option value="ECOLE">Ecole</option>
+		  <option value="EGLIPS">Eglips</option>
+		  <option value="ESPOIR">Espoir</option>
+		  <option value="ETUDEHOUSE">Etude House</option>
+		  <option value="G9SKIN">G9skin</option>
+		  <option value="HANYUL">Hanyul</option>
+		  <option value="HERA">Hera</option>
+		  <option value="HOLIKAHOLIKA">Holika Holika</option>
+		  <option value="INNISFREE">Innisfree</option>
+		  <option value="IOPE">Iope</option>
+		  <option value="JSOOP">Jsoop</option>
+		  <option value="KLAIRS">Klairs</option>
+		  <option value="LANEIGE">Laneige</option>
+		  <option value="MAMONDE">Mamonde</option>
+		  <option value="MISEENSCENE">Mise En Scene</option>
+		  <option value="MISSHA">Missha</option>
+		  <option value="MIZON">Mizon</option>
+		  <option value="NARUTEREPUBLIC">Nature Republic</option>
+		  <option value="OHUI">Ohui</option>
+		  <option value="PERIPERA">Peripera</option>
+		  <option value="SEANTREE">SeaNTree</option>
+		  <option value="SECRET KEY">Secret Key</option>
+		  <option value="SKINFOOD">Skinfood</option>
+		  <option value="SUM37">Su:m37</option>
+		  <option value="SULWHASOO">Sulwhasoo</option>
+		  <option value="THE YEON">The Yeon</option>
+		  <option value="THEFACESHOP">Thefaceshop</option>
+		  <option value="TONYMOLY">Tony Moly</option>
+		  <option value="TOUCHINSOL">Touch in Sol</option>
+		  <option value="WHOO">Whoo</option>
+		  <option value="OTHERS">Others</option>
+        </select>
+	  </div>	  
+	  <div class="w3-col w3-container s4 m4 l4 w3-right"> 	
+        <select class="w3-select" name="sort" id="priceSelect" onchange="loadProduct()">
+	      <option value="" disabled selected>Sắp xếp theo</option>
+          <option value="priceUp">Giá tăng dần</option>
+          <option value="priceDown">Giá giảm dần</option>
+        </select>
+	  </div>
+	</div>
+	  
+	  <div class="w3-row w3-container w3-white"><h4 id="filterResult">Để hiển thị sản phẩm, xin vui lòng chọn loại sản phẩm và nhãn hiệu.</h4></div>	  
+	  <div class="w3-row w3-container w3-white" id="numProduct"><h4>Danh sách sản phẩm</h4> Tất cả: 0 sản phẩm </div>
+  	  <div class="w3-row w3-container w3-white w3-text-red w3-right">* Giá sản phẩm chưa tính phí vận chuyển</div>
+      <div class="w3-row w3-container w3-white" id="productDisplay"></div>
+
+		
+		<script>
+		// Script to display product 			
+        function loadProduct() {		
+          var type = document.getElementById("typeSelect").value;
+		  var brand = document.getElementById("brandSelect").value;
+		  var sort = document.getElementById("priceSelect").value;
+		  document.getElementById("filterResult").innerHTML = 'Kết quả tìm kiếm cho:   ' 
+		  + document.getElementById("typeSelect").options[document.getElementById("typeSelect").selectedIndex].text 
+		  + ' + ' + document.getElementById("brandSelect").options[document.getElementById("brandSelect").selectedIndex].text;
+          var fixPath = 'product/formen/';		// Chanege here
+          var temPath =  type + '/product.xml'
+          var path = fixPath + temPath;	  
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            loadProductItem(this);
+            }
+          };
+          xhttp.open("GET", path, true);
+          xhttp.send();
+        }
+				
+        function loadProductItem(xml) {		
+		  var allProduct = [];
+		  // The currency rate
+		  var curValue = 20;		  
+          var type = document.getElementById("typeSelect").value;
+		  var brand = document.getElementById("brandSelect").value;		  
+		  var sort = document.getElementById("priceSelect").value;		  
+          var fixPath = 'product/formen/';  		// Chanege here
+          var i, n;
+		  var allItem;
+          var xmlDoc = xml.responseXML;
+		  if (brand == "ALL") {
+            allItem = xmlDoc.getElementsByTagName("ITEM");
+		    }
+	      else {
+			var brandChoose = xmlDoc.documentElement.childNodes;
+			for (i = 0; i < brandChoose.length; i++) {
+			  if (brandChoose[i].nodeName == brand) {
+				allItem = brandChoose[i].getElementsByTagName("ITEM");;
+				}
+			  }
+		    }		
+		  if ( 2<1) {
+		    html += '<h3> San pham dang duoc update</h3>';
+			}
+		    else {			
+			  for (i = 0; i < allItem.length; i++) { 
+			    id = allItem[i].getElementsByTagName("ID")[0].childNodes[0].nodeValue;
+				nametemp = id + ' ' + allItem[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue;
+				if (nametemp.length > 25) {
+				  name = nametemp.slice(0,25);
+				  }
+				  else {
+				  name = nametemp;
+				  } 				 				
+				pricetemp = allItem[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue;
+				for (n = 0; n < pricetemp.length; n++) { 
+				  if (pricetemp[n] == "원") {
+				    price = parseFloat(pricetemp.slice(0,n));
+					}
+					else {
+					price = parseFloat(pricetemp);
+					}
+				  // This is for products which have price greater than 1000 원
+				  if (price < 500){
+					price = price*1000;
+				    }
+				  }
+				image = allItem[i].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue;
+				if (image == " "){
+				  image = "shopLogo.jpg";
+				  }
+				
+				// Build an object
+				var product = {};
+				product.idValue = id;
+			    product.nameValue = name;
+			    product.priceValue = price;
+			    product.imageValue = image;
+				allProduct.push(product);				
+			  }
+		  }
+		  document.getElementById("numProduct").innerHTML = "Tất cả: " + allProduct.length + " sản phẩm";		  
+		  // Display products according to sort value
+		  var tempProduct, p, htmlSort;
+		  
+		  if (sort == "") {
+			tempProduct = allProduct;
+			document.getElementById("productDisplay").innerHTML = display(tempProduct);  
+		  }		  
+		  
+		  if (sort == "priceUp") {
+			tempProduct = allProduct.slice().sort(function (a, b) {
+			  return a.priceValue - b.priceValue;
+	        });		
+			document.getElementById("productDisplay").innerHTML = display(tempProduct);  
+		  }
+		  
+		  if (sort == "priceDown") {
+			tempProduct = allProduct.slice().sort(function (a, b) {
+			  return b.priceValue - a.priceValue;
+	        });
+			document.getElementById("productDisplay").innerHTML = display(tempProduct);			           
+		  }
+		  function display(tempProduct) {
+		  	for (p = 0; p < tempProduct.length; p++) {
+			  htmlSort += '        <div class="w3-col m6 l3 w3-white w3-container w3-center w3-hover-opacity w3-margin-bottom ">';
+			  htmlSort += '          <a target="_blank" href="' + fixPath + type + '/' + tempProduct[p].imageValue + '"><img src="' + fixPath + type + '/' + tempProduct[p].imageValue + '" alt="' + id + '" style="width:95%"></a>';
+			  htmlSort += '          <p class="productPrice">'+ tempProduct[p].priceValue* curValue + ' VND (' + tempProduct[p].priceValue + '원)</p>';
+		      htmlSort += '          <p class="productName">'+ ' ' + tempProduct[p].nameValue + '</p>';
+			  htmlSort += '          <div class="w3-section">';
+			  htmlSort += '            <button class="w3-button w3-teal" onclick="update()"><i class="fa fa-shopping-cart"></i> Buy</button>';
+			  htmlSort += '          </div>';
+			  htmlSort += '        </div>';
+			}
+			return htmlSort;  	  
+		  }			
+        } 
+        		
+		</script>
+	  	  
+      </div>  
+    </div>
+
+
+<!-- Updating -->
+<div id="updating" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-teal w3-display-container"> 
+      <span onclick="document.getElementById('updating').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>Cảm ơn bạn đã ghé thăm Kara's Shop <i class="fa fa-heart"></i></h4>
+	  <h5>Tính năng này hiện đang được hoàn thiện và sẽ sớm cập nhật. 
+          Mong bạn thông cảm và vui lòng liên hệ qua Facebook hoặc <a href="index.html#message">gửi tin nhắn</a> cho chúng tôi nếu có thắc mắc. Thank you ^^</h5>
+    </header>
+    <div class="w3-container">
+		<p><i class="fa fa-facebook w3-text-teal w3-xlarge"></i> <a href="https://www.facebook.com/karashop25"  target="_blank"> www.facebook.com/karashop25</a></p>
+		<p><i class="fa fa-twitch w3-text-teal w3-xlarge"></i><a href="https://www.messenger.com/t/karashop25"  target="_blank"> www.messenger.com/t/karashop25</a></p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Chúc một ngày tốt lành - Kara's Shop <i class="fa fa-heart"></i></p>
+    </footer>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d2 w3-center">
+  <h4>Để nhận thông tin khuyến mãi mới nhất, vui lòng cập nhật qua website hoặc 
+  <a href="https://www.facebook.com/Karas-Shop-1923399674585266/" 
+     target="_blank" title="Facebook">Facebook.</a></h4>
+  <p>Copyright 2017 <a href="index.html" target="_blank">Kara's Shop</a>. All rights reserved.</p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Trở về đầu trang</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Updating function
+function update() {
+	document.getElementById('updating').style.display='block';
+}
+</script>
+<script>
+// Google Translate
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'kr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'translate');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
